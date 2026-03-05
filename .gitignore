@@ -43,3 +43,6 @@ backend/firms_cache/
 
 # Keep .env.production template but not the actual values
 !.env.production
+
+# Claude Code
+CLAUDE.md
