@@ -6,19 +6,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   
-  // Development server settings
   server: {
-    port: 5173, // React will run on this port
-    
-    // Optional: Set up a proxy to avoid CORS issues
-    // Uncomment this if you have CORS problems
-    /*
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5001',
-        changeOrigin: true
-      }
-    }
-    */
+    port: 5173,
+  },
+
+  preview: {
+    port: process.env.PORT ? parseInt(process.env.PORT) : 4173,
+    host: '0.0.0.0',
   }
 })
